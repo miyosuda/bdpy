@@ -2,6 +2,9 @@
 
 This file is a part of BdPy.
 '''
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 
 import itertools as itr
@@ -37,7 +40,7 @@ def load_epi(datafiles):
     xyz = np.array([])
 
     for df in datafiles:
-        print "Loading %s" % df
+        print("Loading {}".format(df))
 
         # Load an EPI image
         img = nipy.load_image(df)

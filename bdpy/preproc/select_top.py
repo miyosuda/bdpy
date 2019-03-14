@@ -3,13 +3,16 @@ select_top
 
 This file is a part of BdPy.
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 
 __all__ = ['select_top']
 
 
 import numpy as np
-from util import print_start_msg, print_finish_msg
+from .util import print_start_msg, print_finish_msg
 
 
 def select_top(data, value, num, axis=0, verbose=True):

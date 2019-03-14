@@ -21,7 +21,9 @@ API lits
     - load
     - save
 '''
-
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 __all__ = ['BData']
 
@@ -33,8 +35,8 @@ import h5py
 import numpy as np
 import scipy.io as sio
 
-from metadata import MetaData
-from featureselector import FeatureSelector
+from .metadata import MetaData
+from .featureselector import FeatureSelector
 
 
 # BData class ##########################################################
@@ -728,6 +730,10 @@ class BData(object):
             md_keys = dat["metadata"]['key'][:].tolist()
             md_descs = dat["metadata"]['description'][:].tolist()
             md_values = np.asarray(dat["metadata"]['value'], dtype=np.float)
+
+        # Convert byte array to str
+        md_keys = [md_key.decode() for md_key in md_keys]
+        md_descs = [md_desc.decode() for md_desc in md_descs]
 
         if 'dataSet' in dat:
             self.dataset = np.asarray(dat["dataSet"], dtype=np.float)

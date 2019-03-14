@@ -3,10 +3,13 @@ Interface functions for preprocessing
 
 This file is a part of BdPy
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 
-from preprocessor import Average,Detrender,Normalize,Regressout,ReduceOutlier,ShiftSample
-from util import print_start_msg, print_finish_msg
+from .preprocessor import Average,Detrender,Normalize,Regressout,ReduceOutlier,ShiftSample
+from .util import print_start_msg, print_finish_msg
 
 
 def average_sample(x, group=[], verbose=True):

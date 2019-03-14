@@ -35,4 +35,4 @@ if __name__ == '__main__':
                     'bdpy.preproc',
                     'bdpy.stats',
                     'bdpy.util'],
-          install_requires=['numpy', 'scipy', 'scikit-learn', 'h5py'])
+          install_requires=['numpy', 'scipy', 'scikit-learn', 'h5py', 'nipy'])

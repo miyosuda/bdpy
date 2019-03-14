@@ -1,10 +1,13 @@
 '''Utility functions for BData'''
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 import copy
 
 import numpy as np
 
-from bdata import BData
+from .bdata import BData
 
 
 def vstack(bdata_list, successive=[]):
